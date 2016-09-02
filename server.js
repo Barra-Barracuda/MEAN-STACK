@@ -1,8 +1,8 @@
-var express = require('express');
+var express = require('express'); //express框架
 var app = express();
-var mongojs = require('mongojs');
+var mongojs = require('mongojs');  //MongoDB API 的简单封装
 var db = mongojs('contactlist', ['contactlist']); //数据库
-var bodyParser = require('body-parser'); //因为服务器不知道怎么去解释body所以要这个
+var bodyParser = require('body-parser'); //中间件，用来解释body
 
 /*app.get('/', function(req, res) {
 	res.send('hello world form server.js');
